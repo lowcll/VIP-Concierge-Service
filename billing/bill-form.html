@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Create a Bill</title>
+    <link rel="stylesheet" href="bill-form-style.css" />
+    <script src="http://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script
+      type="text/javascript"
+      language="javascript"
+      src="bill-form-script.js"
+    ></script>
+  </head>
+  <header>
+      <div>
+          <img src="VIP concierge Main Logo 800x600.png">
+      </div>
+      <nav>
+          <ul>
+              <li><a href="home.html">Home</a></li>
+              <li><a href="destinations.html">Destinations</a></li>
+              <li><a href="reviews.html">Reviews</a></li>
+              <li><a href="appointments.html">Appointments</a></li>
+              <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+      </nav>
+  </header>
+  <body>
+    <div>
+      <h1>Bill Preparation Form</h1>
+      <form action="billprocess.php" method="post">
+        <fieldset>
+          <legend>General Information</legend>
+          <div class="General">
+            <table>
+              <tr>
+                <td>
+                  <label for="genurl"
+                    >Enter the url name for the completed bill:</label
+                  >
+                </td>
+                <td>
+                  <input type="text" name="genurl" id="genurl" required />
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <label for="nametitle"
+                    >Enter the Customer's title (Mr., Ms., Mx., etc.):</label
+                  >
+                </td>
+                <td>
+                  <input type="text" name="nametitle" id="nametitle" required />
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <label for="fname">Enter the Customer's first name: </label>
+                </td>
+                <td>
+                  <input type="text" name="fname" id="fname" required />
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <label for="lname">Enter the Customer's last name: </label>
+                </td>
+                <td>
+                  <input type="text" name="lname" id="lname" required />
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <label for="email">Enter the Customer's email: </label>
+                </td>
+                <td>
+                  <input type="email" name="email" id="email" required />
+                </td>
+              </tr>
+            </table>
+          </div>
+        </fieldset>
+
+        <fieldset id="PartySize">
+            <legend>Party Size</legend>
+            <div class="Party">
+              <!-- insert inputs here -->
+              <label for="partysize">Enter Size of Party for trip:</label>
+              <input type="number" name="partysize" id="partysize" required>
+            <br>
+              <label>Pair up party for rooms?</label>
+              <input type="radio" class="paircheck" name="pairs" id="paircheckyes" value="true">Yes
+              <input type="radio" class="paircheck" name="pairs" id="paircheckno" value="false" checked>No
+            </div>
+          </fieldset>
+
+        <fieldset id="Destination">
+          <legend>Destination</legend>
+          <div class="Destination">
+            <!-- insert inputs here -->
+            <label for="destlist">Destination: </label>
+            <select name="destlist" id="destlist" required>
+                <option value="0">Select</option>
+                <option value="1">Place 1</option>
+                <option value="2">Place 2</option>
+                <option value="3">Place 3</option>
+            </select>
+            <br><br>
+
+            
+            <label for="rooms"># of Rooms:</label>
+            <input type="number" name="rooms" id="rooms" value="0" readonly><br> <br>
+
+            <label for="nights">Nights:</label>
+            <input type="number" id="nights" name="nights" required>
+            <br><br>
+            <label for="destsubtotal">Destination Subtotal:</label>
+            <input type="text" name="destsubtotal" id="destsubtotal" value="$0000" readonly />
+          </div>
+        </fieldset>
+
+       
+
+        <fieldset id="Flights">
+          <legend>Flights</legend>
+          <div class="Flights">
+            <!-- insert inputs here -->
+            Flights are programmed into destination database for now <br>
+            <label for="flightinput">Current Price of Flight (override):</label>
+            <input type="text" name="flightinput" id="flightinput">
+            <br> <br>
+
+            <label for="flightsubtotal">Flight Subtotal:</label>
+            <input type="text" name="flightsubtotal" id="flightsubtotal" value="$0000" readonly />
+          </div>
+        </fieldset>
+
+        <fieldset id="CommTotal">
+            <legend>Commission and Total</legend>
+            <div class="CommTotal">
+              <!-- insert inputs here -->
+              <label for="subtotal">Subtotal: </label>
+              <input type="text" name="subtotal" id="subtotal" value="$0000" readonly /> <br><br>
+                <label for="commission">Commission: </label>
+              <input type="text" name="commission" id="commission" value="$0000" readonly /><br><br>
+              <label for="total">Total: </label>
+              <input type="text" name="total" id="total" value="$0000" readonly />
+            </div>
+          </fieldset>
+
+        <input type="submit" value="Create Bill" />
+      </form>
+    </div>
+    <footer>
+        &copy; VIP Travel Concierge Services, 2023
+    </footer>
+  </body>
+</html>

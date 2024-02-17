@@ -1,0 +1,145 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+  color: black;
+  margin: 0;
+  padding: 0;
+  min-height: 500px;
+
+  /* background-image: url(pexels-asad-photo-maldives-3155666.jpg); */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+h1 {
+  text-align: center;
+  color: #5591a4;
+  font-size: 28pt;
+}
+
+h3 {
+  text-align: center;
+  color: black;
+  font-size: 20pt;
+}
+
+header {
+  background-color: #5591a4;
+  padding: 10px 0;
+}
+
+header ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+header ul li {
+  display: inline;
+  margin-right: 20px;
+}
+
+header ul li a {
+  text-decoration: none;
+  color: white;
+  padding: 10px 30px;
+  font-weight: bold;
+}
+
+header ul li a:hover {
+  background-color: #f5f5f5;
+  color: #5591a4;
+}
+
+table {
+  margin-left: 35%;
+  margin-right: 35%;
+  width: 30%;
+  border: solid black 1px;
+  border-collapse: collapse;
+}
+td {
+  text-align: center;
+  padding: 15px;
+  margin: 5px;
+  border: solid black 1px;
+  border-collapse: collapse;
+  border-left: none;
+  border-right: none;
+}
+
+footer {
+  font-size: 10pt;
+}
+th {
+  background-color: #f5f5f5;
+}
+tr:nth-child(odd) {
+  background-color: lightgrey;
+}
+tr:nth-child(even) {
+  background-color: #bdcbff;
+}
+.subtotal,
+.total,
+.commission {
+  font-weight: bold;
+}
+
+fieldset {
+  font-size: 14pt;
+  border: solid 1px black;
+  border-top: none;
+  border-radius: 10px;
+  padding: 5px;
+  width: 50%;
+  margin-left: 25%;
+  margin-bottom: 15px;
+}
+
+legend {
+  background-color: #bdcbff;
+  font-size: 20pt;
+  font-weight: bold;
+  width: 100%;
+  height: max-content;
+  padding: 5pt;
+  text-align: center;
+  border-radius: 5px;
+  margin-left: -6px;
+  margin-bottom: -2px;
+}
+
+input[type="text"],
+input[type="email"] {
+  width: 200px;
+  height: 25px;
+  border: 1px solid #5591a4;
+  border-radius: 2px;
+  padding: 5px;
+}
+input[type="number"] {
+  width: 50px;
+  height: 25px;
+  border: 1px solid #5591a4;
+  border-radius: 2px;
+  padding: 5px;
+}
+footer {
+  padding: 10px;
+  font-size: 10pt;
+}
+input[type=month]{
+    padding: 10px;
+    border: 1px solid #5591a4;
+    border-radius: 2px;
+}
+input[type=submit]{
+    color:#bdcbff;
+    background-color: #5591a4;
+    padding: 5px;
+    height: 35px;
+    font-size: 14pt;
+}
